@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64转码工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Base64转码工具</h1>
+        </header>
+
+        <main>
+            <div class="tool-tabs">
+                <button class="tab-btn active" data-tab="text">文本转码</button>
+                <button class="tab-btn" data-tab="image">图片转码</button>
+                <button class="tab-btn" data-tab="base64-to-image">Base64转图片</button>
+            </div>
+
+            <div class="tab-content active" id="text-tab">
+                <div class="input-section">
+                    <h2>文本转Base64</h2>
+                    <textarea id="text-input" placeholder="输入要编码的文本..."></textarea>
+                    <button id="encode-text">编码</button>
+                </div>
+                <div class="output-section">
+                    <h2>Base64结果</h2>
+                    <textarea id="text-output" readonly></textarea>
+                    <button id="copy-text-output">复制</button>
+                    <button id="decode-text">解码</button>
+                </div>
+            </div>
+
+            <div class="tab-content" id="image-tab">
+                <div class="input-section">
+                    <h2>上传图片</h2>
+                    <div class="image-upload-container">
+                        <input type="file" id="image-input" accept="image/*">
+                        <label for="image-input" class="upload-label">点击上传图片或拖放至此</label>
+                    </div>
+                    <div class="image-preview-container">
+                        <img id="image-preview" src="" alt="预览图">
+                    </div>
+                </div>
+                <div class="output-section">
+                    <h2>Base64结果</h2>
+                    <textarea id="image-output" readonly></textarea>
+                    <button id="copy-image-output">复制</button>
+                </div>
+            </div>
+
+            <div class="tab-content" id="base64-to-image-tab">
+                <div class="input-section">
+                    <h2>输入Base64编码</h2>
+                    <textarea id="base64-input" placeholder="输入Base64编码..."></textarea>
+                    <button id="convert-to-image">转换为图片</button>
+                </div>
+                <div class="output-section">
+                    <h2>图片结果</h2>
+                    <div class="image-preview-container">
+                        <img id="converted-image" src="" alt="转换后的图片">
+                    </div>
+                    <button id="download-image" disabled>下载图片</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 Base64转码工具 - 简洁高效的编码解码解决方案</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
